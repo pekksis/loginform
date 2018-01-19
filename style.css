@@ -1,0 +1,60 @@
+
+/*html element is by default width: 100%. It's height however is only as high
+  as the size of the elements it contains. To get the login form to center of
+  the page, we need to set html and body (which is child element of html) to
+  cover the whole page.*/
+html, body{
+  height: 100%;
+}
+
+/*Check out what display: flex does from the mozilla developer network (MDN)
+  documentation. We change it's orientation to column direction. Background
+  color we got from the figma design.*/
+body{
+  display: flex;
+  flex-direction: column;
+  background-color: #006691;
+}
+
+/*Now that html and body cover the whole page and we are using flex display,
+  we can use margin:auto to place this element to the center of the page. with
+  text-align: center we can make sure that the button (which is a child element
+  of this element) is also centered. width: 40% is 40% of the width of this
+  element's parent element (which in this case is body element) */
+.login{
+  margin: auto;
+  text-align: center;
+  width: 40%;
+}
+
+/*Margin adds more space between the two forms and padding increases their sizes.
+  Border-radius makes them rounder and prettier.*/
+.login input{
+  padding: 3%;
+  margin-top: 8%;
+  border-radius: 10px;
+  width: 65%;
+}
+
+/*Margin to get space from input fields. Padding for bigger sized button.
+  Colors etc. from figma design.   */
+.login button{
+  border: 3px solid #FFFFFF;
+  box-sizing: border-box;
+  box-shadow: 0px 8px 5px rgba(0, 0, 0, 0.65);
+  border-radius: 25px;
+  margin-top: 10%;
+  padding: 2%;
+  font-size: 1.2em;
+  font-family: Salsa;
+  color: #FFFFFF;
+  background-color: Transparent;
+  width: 35%;
+}
+
+/*Finally, to center the header element horizontally we can set margin-left and
+  -right to auto.*/
+.header{
+  margin-left: auto;
+  margin-right: auto;
+}
